@@ -3,10 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B73CED272621A07500453EEE /* question.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73CED262621A07500453EEE /* question.swift */; };
+		B73CED3D2621A5F000453EEE /* play.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73CED3C2621A5F000453EEE /* play.swift */; };
+		B73CED4A2622F30400453EEE /* sheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73CED492622F30400453EEE /* sheet.swift */; };
+		B75482882626A14200B9FDB5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B75482872626A14200B9FDB5 /* GoogleService-Info.plist */; };
+		B754828D2626A1C000B9FDB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B754828C2626A1C000B9FDB5 /* AppDelegate.swift */; };
+		B75482932626A45700B9FDB5 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = B75482922626A45700B9FDB5 /* FirebaseFirestoreSwift-Beta */; };
 		B79A334A26175273003F22C5 /* wordApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79A334926175273003F22C5 /* wordApp.swift */; };
 		B79A334C26175273003F22C5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79A334B26175273003F22C5 /* ContentView.swift */; };
 		B79A334E26175275003F22C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B79A334D26175275003F22C5 /* Assets.xcassets */; };
@@ -33,6 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B73CED262621A07500453EEE /* question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = question.swift; sourceTree = "<group>"; };
+		B73CED3C2621A5F000453EEE /* play.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = play.swift; sourceTree = "<group>"; };
+		B73CED492622F30400453EEE /* sheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sheet.swift; sourceTree = "<group>"; };
+		B75482872626A14200B9FDB5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B754828C2626A1C000B9FDB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B79A334626175273003F22C5 /* word.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = word.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B79A334926175273003F22C5 /* wordApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wordApp.swift; sourceTree = "<group>"; };
 		B79A334B26175273003F22C5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B75482932626A45700B9FDB5 /* FirebaseFirestoreSwift-Beta in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,8 +107,13 @@
 		B79A334826175273003F22C5 /* word */ = {
 			isa = PBXGroup;
 			children = (
+				B75482872626A14200B9FDB5 /* GoogleService-Info.plist */,
+				B754828C2626A1C000B9FDB5 /* AppDelegate.swift */,
+				B73CED492622F30400453EEE /* sheet.swift */,
 				B79A334926175273003F22C5 /* wordApp.swift */,
 				B79A334B26175273003F22C5 /* ContentView.swift */,
+				B73CED3C2621A5F000453EEE /* play.swift */,
+				B73CED262621A07500453EEE /* question.swift */,
 				B79A334D26175275003F22C5 /* Assets.xcassets */,
 				B79A335226175275003F22C5 /* Info.plist */,
 				B79A334F26175275003F22C5 /* Preview Content */,
@@ -146,6 +163,9 @@
 			dependencies = (
 			);
 			name = word;
+			packageProductDependencies = (
+				B75482922626A45700B9FDB5 /* FirebaseFirestoreSwift-Beta */,
+			);
 			productName = word;
 			productReference = B79A334626175273003F22C5 /* word.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +237,9 @@
 				Base,
 			);
 			mainGroup = B79A333D26175273003F22C5;
+			packageReferences = (
+				B75482912626A45700B9FDB5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = B79A334726175273003F22C5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -235,6 +258,7 @@
 			files = (
 				B79A335126175275003F22C5 /* Preview Assets.xcassets in Resources */,
 				B79A334E26175275003F22C5 /* Assets.xcassets in Resources */,
+				B75482882626A14200B9FDB5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +283,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B754828D2626A1C000B9FDB5 /* AppDelegate.swift in Sources */,
 				B79A334C26175273003F22C5 /* ContentView.swift in Sources */,
+				B73CED4A2622F30400453EEE /* sheet.swift in Sources */,
 				B79A334A26175273003F22C5 /* wordApp.swift in Sources */,
+				B73CED272621A07500453EEE /* question.swift in Sources */,
+				B73CED3D2621A5F000453EEE /* play.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,6 +602,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B75482912626A45700B9FDB5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.10.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B75482922626A45700B9FDB5 /* FirebaseFirestoreSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B75482912626A45700B9FDB5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreSwift-Beta";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B79A333E26175273003F22C5 /* Project object */;
 }
